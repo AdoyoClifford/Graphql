@@ -1,4 +1,7 @@
 package com.adoyo.graphqlcountries.domain
 
-class GetCountryUseCase {
+class GetCountryUseCase(private val countryClient: CountryClient) {
+    suspend fun execute(code: String): DetailedCountry? {
+        return countryClient.getCountry(code)
+    }
 }
