@@ -27,7 +27,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApolloClient(apolloClient: ApolloClient): CountryClient {
+    fun provideCountryClient(apolloClient: ApolloClient): CountryClient {
         return ApolloCountryClient(apolloClient)
     }
 
