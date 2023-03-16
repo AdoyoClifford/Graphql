@@ -111,7 +111,8 @@ private fun CountryDialog(
 private fun CountryItem(country: SimpleCountry, modifier: Modifier) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.Center,
+        modifier = modifier
     ) {
         Text(text = country.emoji, fontSize = 30.sp)
         Spacer(modifier = Modifier.width(16.dp))
